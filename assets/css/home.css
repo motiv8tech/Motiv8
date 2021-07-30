@@ -1,0 +1,217 @@
+.home__hero__wrap {
+  display: flex;
+  padding: 50px 8%;
+}
+
+.home__hero__text {
+  flex: 1;
+}
+.home__hero__text > h1,
+.home__hero__text > p {
+  color: var(--color-white);
+}
+
+.home__hero__text > h1 {
+  font-size: 48px;
+}
+.home__hero__image__wrap {
+  flex: 1;
+}
+.home__hero__image__wrap img {
+  width: 100%;
+}
+
+.home__choose__us__wrap {
+  padding: 50px 8%;
+}
+
+.home__choose__us__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.home__choose__us__item > img {
+  height: 70px;
+}
+
+.home__more__value__hero > img {
+  width: 100%;
+}
+.home__more__value__content__item {
+  display: flex;
+  align-items: center;
+}
+.home__more__value__content__item > img {
+  height: 14px;
+  margin-right: 20px;
+}
+
+.home__more__value__content__item > p {
+  margin: 8px 0px;
+}
+.home__section {
+  padding: 50px 8%;
+}
+.home__service {
+  background-color: #f7fafd;
+}
+.home__service__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.home__service__body > :not(:last-child) {
+  border-bottom: 1px solid var(--text-color-dark-tintS);
+}
+.home__service__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0px 10px;
+}
+.home__service__item > img {
+  height: 80px;
+}
+.home__section__work__process__body {
+  display: grid;
+}
+
+.home__section__work__process__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 0px 10px;
+}
+.home__section__work__process__item > img {
+  height: 80px;
+}
+.home__people__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+.home__people__item span {
+  color: var(--color-primary);
+  font-size: 15px;
+}
+.home__people__item p {
+  font-size: 15px;
+}
+.home__people__item__img__wrap {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  overflow: hidden;
+  border: 2px solid var(--color-primary);
+  padding: 4px;
+  margin: auto;
+}
+
+.home__people__item__img__wrap > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.home__people__item__img__wrap__nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid var(--color-primary);
+  padding: 3px;
+  margin: auto;
+}
+.home__people__item__img__wrap__nav > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.home__people__item__nav {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.home__people__item__nav .slick-slide {
+  opacity: 0.6;
+}
+.home__people__item__nav .slick-current {
+  opacity: 1;
+}
+@media screen and (max-width: 576px) {
+  .home__hero__wrap {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .home__hero__text > h1 {
+    font-size: 36px;
+  }
+  .home__choose__us__body > :not(:last-child) {
+    border-bottom: 2px solid var(--footer-bg);
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+  .home__more__value__wrap {
+    padding: 30px;
+  }
+  .home__service__body {
+    grid-template-columns: 1fr;
+  }
+  .home__service__body > :not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+  }
+  .home__section__work__process {
+    grid-template-columns: 1fr;
+  }
+  .home__section__work__process__body > :not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .home__choose__us__body {
+    display: flex;
+  }
+  .home__choose__us__item {
+    padding: 40px;
+    flex: 1;
+  }
+  .home__more__value__wrap {
+    padding: 50px 8%;
+  }
+  .home__more__value__body {
+    display: flex;
+  }
+  .home__more__value__hero {
+    flex: 1;
+    margin-right: 50px;
+  }
+  .home__more__value__content {
+    flex: 1;
+  }
+  .home__service__body {
+    row-gap: 30px;
+  }
+  .home__service__body > :nth-of-type(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+  .home__section__work__process__body {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+  .home__section__work__process__body > :nth-of-type(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+  .home__people__item {
+    flex-direction: row;
+    text-align: left;
+  }
+  .home__people__item__img__wrap {
+    flex-shrink: 0;
+    margin-right: 30px;
+  }
+}

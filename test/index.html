@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link type="text/css" href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+            <!-- Our pricing plans -->
+            <div class="our-prc">
+                <div class="our-prc-head">
+                    <h2>Our Pricing Plan</h2>
+                </div>
+
+                <div class="prc-cat">
+                    <div class="cat" onclick="biz()"><h1>Business Booster</h1></div>
+                    <div class="cat1" onclick="hub()"><h1>Hub Spaces</h1></div>
+                    <div class="cat2" onclick="acad()"><h1>Motiv8 Academy</h1></div>
+                </div> 
+                <div class="hoverfx"></div>
+                         
+           </div> 
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        // business booster animation logic
+        function biz(){
+            let fx = document.querySelector(".hoverfx")
+            fx.className = "hoverfx"  
+
+            let cat1Heading = document.querySelector(".cat1 h1");
+            cat1Heading.style.color = "blue";  
+
+            let catHeading = document.querySelector(".cat h1");
+            catHeading.style.color = "white";
+
+            let cat2Heading = document.querySelector(".cat2 h1");
+            cat2Heading.style.color = "blue";  
+        };
+
+        // hub animation logic
+        function hub(){
+            let fx = document.querySelector(".hoverfx")
+            fx.className = "hoverfx hub";
+
+            let cat1Heading = document.querySelector(".cat1 h1");
+            cat1Heading.style.color = "white";  
+
+            let catHeading = document.querySelector(".cat h1");
+            catHeading.style.color = "blue";
+
+            let cat2Heading = document.querySelector(".cat2 h1");
+            cat2Heading.style.color = "blue";  
+        };
+
+         // academy animation logic
+        function acad(){
+            let fx = document.querySelector(".hoverfx")
+            fx.className = "hoverfx acad";
+
+            let cat2Heading = document.querySelector(".cat2 h1");
+            cat2Heading.style.color = "white";  
+            
+            let catHeading = document.querySelector(".cat h1");
+            catHeading.style.color = "blue"
+
+            let cat1Heading = document.querySelector(".cat1 h1");
+            cat1Heading.style.color = "blue"  
+        };
+
+
+        // Dom and events 
+
+        let cat = document.querySelector(".cat");
+        cat.addEventListener("onclick", biz)
+
+        let cat1 = document.querySelector(".cat1");
+        cat1.addEventListener("onclick", hub);
+
+        let cat2 = document.querySelector(".cat2");
+        cat2.addEventListener("onclick", acad);
+        
+    </script>
+</html>
