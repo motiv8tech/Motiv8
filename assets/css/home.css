@@ -35,6 +35,18 @@
   height: 70px;
 }
 
+.home__more__value__header > h2 {
+  margin-top: 0px;
+}
+.home__more__value__header::before {
+  content: "Advantage";
+  color: #0000fe;
+  font-size: 9px;
+  font-weight: 150;
+  margin-top: 3px;
+  display: block;
+}
+
 .home__more__value__hero > img {
   width: 100%;
 }
@@ -55,6 +67,18 @@
 }
 .home__service {
   background-color: #f7fafd;
+}
+
+.home__service__header > h2 {
+  margin-top: 0px !important;
+}
+.home__service__header::before {
+  content: "Solutions";
+  color: #0000fe;
+  font-size: 9px;
+  font-weight: 150;
+  margin-top: 3px;
+  display: block;
 }
 .home__service__body {
   display: grid;
