@@ -11,13 +11,13 @@
 
 * {
   box-sizing: border-box;
+  font-family: Ubuntu;
 }
 
 html,
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Ubuntu;
   color: var(--text-color-primary);
 }
 

@@ -1,0 +1,36 @@
+.career__illus_wrap {
+  margin-bottom: 10px;
+  flex: 1;
+}
+.career__no__opening {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 254),
+    rgb(81, 81, 228),
+    rgb(142, 142, 230)
+  );
+  padding: 20px;
+}
+.career__no__opening__text {
+  color: var(--color-white) !important;
+}
+
+.career__more__value__content__item {
+  display: flex;
+  align-items: center;
+}
+.career__more__value__content__item > img {
+  height: 14px;
+  margin-right: 20px;
+}
+
+.career__more__value__content__item > p {
+  margin: 8px 0px;
+}
+
+@media (min-width: 992px) {
+  .career__illus_wrap {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
