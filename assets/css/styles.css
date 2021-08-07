@@ -23,8 +23,6 @@ body {
 
 /* header */
 
-.site-id {
-}
 
 .site-id img {
   cursor: pointer;
@@ -144,58 +142,40 @@ body {
   font-weight: 100;
   margin-top: 40px;
 }
-/* 
-.landing-page button {
-  width: 180px;
-  height: 40px;
-  color: white;
-  background-color: #0000fe;
-  border-radius: 3px;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin: 10px auto;
-}
 
-.landing-page button:hover {
-  background-color: #01018a;
-} */
 
 /* Why choose us */
-.choose-us,
-.our-blog {
-  width: 80%;
-  /* height: 340px; */
-  border: 1px solid red;
-  margin: auto;
+/* Ancestral styles */
+.choose-us-head h2::before,
+.wrk-proc-head h2::before,
+.test-head h2::before {
+  content: "Motivate";
+  color: #0000fe;
+  font-size: 12px;
+  font-weight: 150;
+  margin-top: 3px;
+  display: block;
 }
 
-.choose-us-head,
-.our-blog-head {
-  width: 100%;
-  /* border: 1px solid red; */
-  margin: auto;
+.test-head h2::before {
+  content: "Testimonials";
 }
+
+.wrk-proc-head h2::before {
+  content: "Work Flow";
+}
+
+
+/* choose us head h2 */
+.choose-us-head h2,
+.title__bordered h2, 
+.test-head h2, 
+.wrk-proc-head h2{
+    font-size: 33px;
+}
+
 
 /* Our Blogs---> */
-.our-blog-head h2:before {
-  content: "Knowledge Base";
-  color: #0000fe;
-  font-size: 9px;
-  font-weight: 150;
-  margin-top: 3px;
-  display: block;
-}
-
-.choose-us-head h2::before {
-  content: "Best Software";
-  color: #0000fe;
-  font-size: 9px;
-  font-weight: 150;
-  margin-top: 3px;
-  display: block;
-}
-
 .choose-us-head h2::after,
 .our-blog-head h2:after {
   content: " ";
@@ -290,15 +270,6 @@ body {
   margin: auto;
 }
 
-.rpd-prod-head h2::before {
-  content: "More Value";
-  color: #0000fe;
-  font-size: 9px;
-  font-weight: 150;
-  margin-top: 3px;
-  display: block;
-}
-
 .rpd-prod-head h2::after {
   content: " ";
   background: #0000fe;
@@ -359,77 +330,7 @@ body {
   color: white;
 }
 
-/* Our Services */
-.services {
-  width: 340px;
-  /* height: 500px; */
-  /* border: 1px solid red; */
-  margin: auto;
-}
 
-.serv-head {
-  width: 100%;
-  /* border: 1px solid red; */
-  margin: auto;
-}
-
-.serv-head h2::before {
-  content: "Solutions";
-  color: #0000fe;
-  font-size: 9px;
-  font-weight: 150;
-  margin-top: 3px;
-  display: block;
-}
-
-.serv-head h2::after {
-  content: " ";
-  background: #0000fe;
-  width: 20px;
-  height: 5px;
-  border-radius: 3px;
-  margin-top: 3px;
-  display: block;
-}
-
-.serv-icn-box {
-  width: 280px;
-  /* height: 190px; */
-  /* border: 1px solid red; */
-  margin: auto;
-}
-
-.wrk-proc-icn-box-up {
-  width: 100%;
-  height: 80px;
-  /* border: 1px solid red; */
-  margin: auto;
-  margin-bottom: 20px;
-}
-
-.wpibu-left,
-.wpibu-right {
-  width: 80px;
-  /* height: 80px; */
-  /* border: 1px solid red; */
-  float: left;
-}
-
-.wpibu-right {
-  float: right;
-}
-.wpibu-left img,
-.wpibu-right img {
-  display: block;
-  margin: 0px auto;
-}
-
-.wpibu-left h2,
-.wpibu-right h2 {
-  font-size: 8px;
-  font-weight: 100;
-  text-align: center;
-}
 
 /* Our working process */
 .wrk-proc {
@@ -443,15 +344,6 @@ body {
   width: 100%;
   /* border: 1px solid red; */
   margin: auto;
-}
-
-.wrk-proc-head h2::before {
-  content: "Work Flow";
-  color: #0000fe;
-  font-size: 9px;
-  font-weight: 150;
-  margin-top: 3px;
-  display: block;
 }
 
 .wrk-proc-head h2::after {
@@ -504,186 +396,6 @@ body {
   text-align: center;
 }
 
-/* Our pricing plans */
-.our-prc {
-  width: 340px;
-  /* height: 340px; */
-  /* border: 1px solid greenyellow; */
-  margin: auto;
-}
-
-.our-prc-head {
-  width: 100%;
-  /* border: 1px solid red; */
-  margin: auto;
-}
-
-.our-prc-head h2::before {
-  content: "Best Pricing";
-  color: #0000fe;
-  font-size: 9px;
-  font-weight: 150;
-  margin-top: 3px;
-  display: block;
-}
-
-.our-prc-head h2::after {
-  content: " ";
-  background: #0000fe;
-  width: 20px;
-  height: 5px;
-  border-radius: 3px;
-  margin-top: 3px;
-  display: block;
-}
-
-.prc-cat {
-  width: 100%;
-  height: 35px;
-  /* border: 1px solid #0000FE; */
-  /* margin-top: 10px; */
-  display: flex;
-  justify-content: space-between;
-  /* float: left; */
-}
-
-.cat,
-.cat1,
-.cat2 {
-  width: 100px;
-  height: 100%;
-  color: white;
-  /* color: #000FFF; */
-  /* background-color: #000FFF; */
-  font-size: 8px;
-  text-align: center;
-  /* border: 1px solid #0000FE; */
-  border: none;
-  border-radius: 3px;
-  box-shadow: 2px 2px 15px #2500f82a;
-  float: left;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.cat h1,
-.cat1 h1,
-.cat2 h1 {
-  margin-top: 13px;
-  font-size: 8px;
-  text-align: center;
-}
-
-.cat1 h1,
-.cat2 h1 {
-  color: #000fff;
-}
-
-.hoverfx {
-  width: 100px;
-  height: 35px;
-  /* height: 100%; */
-  position: relative;
-  top: -35px;
-  left: 0px;
-  background-color: #000fff;
-  border-radius: 3px;
-  z-index: 1;
-  float: left;
-  transition: 0.4s ease left;
-}
-
-.hoverfx.hub {
-  transition: 0.4s ease left;
-  left: 120px;
-}
-
-.hoverfx.acad {
-  transition: 0.4s ease left;
-  left: 240px;
-}
-
-.price-box {
-  width: 100%;
-  /* height: 1206px; */
-  /* border: 1px solid red; */
-}
-
-.price,
-.price-ent,
-.price-corp {
-  width: 336px;
-  height: 420px;
-  border: 0.2px solid #0000fe48;
-  margin: auto;
-  margin: 20px auto;
-  /* padding: 20px; */
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-/* .price:hover, .price-corp:hover {
-    transition: all 500ms ease;
-    box-shadow: 1px 1px 5px #01011d48;
-    border: none;
-} */
-
-.price-img,
-.price-ent-img,
-.price-corp-img {
-  width: 100%;
-  height: 45%;
-  /* border: 1px solid #0000FE; */
-  /* margin: auto; */
-}
-
-.price-img img {
-  position: relative;
-  top: 72px;
-  left: -18px;
-}
-
-.price-ent-img img {
-  position: relative;
-  top: 80px;
-  left: 85px;
-}
-
-.price-corp-img img {
-  /* display: block; */
-  /* margin: 20px ; */
-  margin: 55px 80px;
-}
-
-.price-meta {
-  width: 296px;
-  height: 200px;
-  /* border: 1px solid #0000FE; */
-  margin: auto;
-}
-
-.price-meta ul {
-  margin-right: 45px;
-  list-style-type: none;
-  text-align: center;
-  /* border: 1px solid #0000FE; */
-}
-
-.price-meta ul li {
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-.price-meta ul li:nth-child(1) {
-  color: #0000fe;
-  font-size: 20px;
-}
-
-.price-meta ul li:nth-child(5) {
-  color: #0000fe;
-  font-weight: 500;
-  font-size: 20px;
-}
 
 /*testimonials */
 .test {
@@ -697,15 +409,6 @@ body {
   width: 100%;
   /* border: 1px solid red; */
   margin: auto;
-}
-
-.test-head h2::before {
-  content: "Testimonials";
-  color: #0000fe;
-  font-size: 9px;
-  font-weight: 150;
-  margin-top: 3px;
-  display: block;
 }
 
 .test-head h2::after {
@@ -1051,8 +754,8 @@ p {
   line-height: 28px !important;
   color: var(--text-color-primary);
 }
-.title__bordered {
-  /* width: 100%; */
+.title__bordered h2, .test-head h2{
+    font-size: 33px;
 }
 
 .title__bordered h2:after {
@@ -1079,3 +782,4 @@ p {
   border-width: 2px;
   border-color: var(--color-primary);
 }
+
