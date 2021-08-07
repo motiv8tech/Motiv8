@@ -14,6 +14,21 @@
 .home__hero__text > h1 {
   font-size: 48px;
 }
+
+ .home__hero__button {
+  width: 237px;
+  height: 54px;
+  font-weight: 300;
+  color: #0000fe;
+  background-color: var(--color-white);
+  /* background: rgb(3,5,219);
+  background: linear-gradient(90deg, rgba(3,5,219,1) 35%, rgba(0,156,255,1) 100%);  */
+  border-radius: 8px;
+  border:none;
+  outline:none;
+
+}
+
 .home__hero__image__wrap {
   flex: 1;
 }
@@ -21,6 +36,10 @@
   width: 100%;
 }
 
+
+
+
+/* choose us */
 .home__choose__us__wrap {
   padding: 50px 8%;
 }
@@ -38,10 +57,11 @@
 .home__more__value__header > h2 {
   margin-top: 0px;
 }
+
 .home__more__value__header::before {
   content: "Advantage";
   color: #0000fe;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 150;
   margin-top: 3px;
   display: block;
@@ -72,14 +92,17 @@
 .home__service__header > h2 {
   margin-top: 0px !important;
 }
+
 .home__service__header::before {
   content: "Solutions";
   color: #0000fe;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 150;
   margin-top: 3px;
   display: block;
 }
+
+
 .home__service__body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,10 +192,14 @@
   .home__hero__wrap {
     flex-direction: column;
     padding: 30px;
+    text-align: center;
   }
-
+ 
   .home__hero__text > h1 {
     font-size: 36px;
+  }
+  .home__hero__image__wrap{
+    margin-top:30px
   }
   .home__choose__us__body > :not(:last-child) {
     border-bottom: 2px solid var(--footer-bg);
@@ -197,6 +224,9 @@
 }
 
 @media screen and (min-width: 577px) {
+.home__hero__wrap{
+  align-items: center;
+}
   .home__choose__us__body {
     display: flex;
   }
