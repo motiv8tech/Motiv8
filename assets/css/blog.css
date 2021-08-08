@@ -53,6 +53,13 @@
   color: var(--color-primary);
   margin-right: 10px;
 }
+.blog__text__container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
 
 .blog__text__container > p {
   margin: 0;
@@ -67,6 +74,7 @@
 
 .blog__post__body {
   padding: 20px;
+  overflow: hidden;
 }
 
 .blog__posts {

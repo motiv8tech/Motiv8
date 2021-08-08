@@ -6,17 +6,39 @@ function DateTime() {
     </div>
   );
 }
+function useFetchPost() {
+  const [post, setPost] = React.useState({});
+  var query = window.location.search.substring(1);
+  var id = query.split("=")[1];
+
+  const onFetchBlog = async () => {
+    await fetch(
+      `https://desolate-everglades-85377.herokuapp.com/blog/post/${id}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => setPost(res))
+      .catch((e) => console.log(e));
+  };
+  React.useEffect(() => {
+    onFetchBlog();
+  }, []);
+  return [post];
+}
 
 function Post() {
+  const [post] = useFetchPost();
+
   return (
     <div>
-      <h2>Achieving Sustainability</h2>
+      <h2>{post.title}</h2>
       <DateTime />
-      <p>
-        Sustainability is the ability to optimize the use of rsourcess in the
-        enviorment without destroying the ability of the futur generation to do
-        so
-      </p>
+      <p>{post.content}</p>
     </div>
   );
 }

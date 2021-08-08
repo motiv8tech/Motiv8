@@ -28,20 +28,17 @@ function TextContainer({ title, content }) {
   );
 }
 
-function PostCard() {
+function PostCard({ title, content, id }) {
   return (
     <div className="blog__post__card">
       <FirstImage src="../../img/blog_pic.jpg" />
       <div className="blog__post__body">
         <DateTime />
-        <TextContainer
-          title="Achieving Sustainability"
-          content="Sustainability is the ability to optimize the use of rsourcess in the
-        enviorment without destroying the ability of the futur generation to do
-        so"
-        />
+        <TextContainer title={title} content={content} />
         <ReadMoreButton
-          onClick={() => window.location.assign("../../pages/post.html?id=40")}
+          onClick={() =>
+            window.location.assign(`../../pages/post.html?id=${id}`)
+          }
         />
       </div>
     </div>
@@ -49,18 +46,16 @@ function PostCard() {
 }
 
 function useFetchBlog() {
-  const [blogs, setBlogs] = React.useState();
+  const [blogs, setBlogs] = React.useState([]);
 
   const onFetchBlog = async () => {
-    console.log("ello world");
-    await fetch("https://pacific-plateau-65675.herokuapp.com/blog", {
+    await fetch("https://desolate-everglades-85377.herokuapp.com/blog", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((res) => res.json())
-      .then((res) => console.log(res))
       .then((res) => setBlogs(res))
       .catch((e) => console.log(e));
   };
@@ -73,11 +68,11 @@ function useFetchBlog() {
 
 function Posts() {
   const [blogs] = useFetchBlog();
-  console.log(blogs);
+
   return (
     <div className="blog__posts">
-      {Array.from({ length: 5 }).map((arr, i) => (
-        <PostCard key={i} />
+      {blogs.map((arr, i) => (
+        <PostCard key={i} {...arr} />
       ))}
     </div>
   );
