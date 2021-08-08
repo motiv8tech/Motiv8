@@ -1,10 +1,14 @@
-function DateTime() {
+function DateTime(props) {
   return (
     <div className="blog__date__time">
       <i className="fa fa-history"> </i>
-      <small>August 1st, 2021</small>
+      <small>{date(props.date)}</small>
     </div>
   );
+}
+
+function date(date) {
+  return new Date(date).toLocaleDateString();
 }
 
 function FirstImage({ src }) {
@@ -28,12 +32,12 @@ function TextContainer({ title, content }) {
   );
 }
 
-function PostCard({ title, content, id }) {
+function PostCard({ title, content, id, date_posted }) {
   return (
     <div className="blog__post__card">
       <FirstImage src="../../img/blog_pic.jpg" />
       <div className="blog__post__body">
-        <DateTime />
+        <DateTime date={date_posted} />
         <TextContainer title={title} content={content} />
         <ReadMoreButton
           onClick={() =>
